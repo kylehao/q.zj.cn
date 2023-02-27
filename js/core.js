@@ -63,12 +63,12 @@ Core.menu={
         data: [[{
             text: "背景1",
             func: function() {
-                $(this).attr("style",'background:url(images/background.jpg) repeat right bottom transparent;');
+                $(this).attr("style",'background:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/background.jpg) repeat right bottom transparent;');
             }
         }, {
             text: "背景2",
             func: function() {
-                $(this).attr("style",'background:url(images/background2.jpg) repeat right bottom transparent;');
+                $(this).attr("style",'background:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/background2.jpg) repeat right bottom transparent;');
             }       
         }]]
     }]
@@ -191,7 +191,7 @@ Core.create = function(obj,opt){
     if(typeof(obj)==='string'){
         var options = {
             num		:Date.parse(new Date()),
-            imgsrc	:"images/shortcut/news.png",
+            imgsrc	:"https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/shortcut/news.png",
             title	:opt.title,
             url		:opt.url,
             width	:opt.width,
