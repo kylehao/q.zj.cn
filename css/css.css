@@ -15,7 +15,7 @@ body{height:100%;font:12px/1.8 Microsoft YaHei,simsong;height:100%;overflow:hidd
 #task-bar{position:absolute;right:0;bottom:0;left:0;width:100%;height:29px;overflow:hidden;border-top:1px solid #272C36;border-color:rgba(20, 20, 20, 0.8);background:#31323A;background:rgba(40, 40, 40, 0.9);opacity:0.9;filter:alpha(opacity=90)}
 .task-window{position:absolute;top:0;right:60px;left:2px;height:28px;overflow:hidden;float: left;}
 .task-window li{position:relative;float:left;width:125px;height:26px;margin-right:1px;overflow:hidden;color:#F4F4F4;border:1px solid #272C36;border-color:rgba(30, 30, 30, 0.7);cursor:pointer}
-.task-window b{background:url(../images/desktop_spr_x.png) repeat-x;display:block;height:24px;font-weight:normal;border:1px solid;border-color:#6F758A #585C6D #414F5A}
+.task-window b{background:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/desktop_spr_x.png) repeat-x;display:block;height:24px;font-weight:normal;border:1px solid;border-color:#6F758A #585C6D #414F5A}
 .task-window b:hover{border-color:#AEB2BA #9196A1 #616A77;background-position:0 -25px}
 .task-window b:active{border-color:#647382 #8A91A0 #9398A6;background-position:0 -50px}
 .task-window b.focus{border-color:#B8BFCA #9EA8B7 #8A99A9;background-position:0 -75px}
@@ -24,7 +24,7 @@ body{height:100%;font:12px/1.8 Microsoft YaHei,simsong;height:100%;overflow:hidd
 
 .task-panel{position:absolute;top:0;right:0px;height:28px;overflow:hidden;float: left;}
 .task-panel li{position:relative;float:left;width:100px;height:26px;text-align: center;margin-right:1px;overflow:hidden;color:#F4F4F4;border:1px solid #272C36;border-color:rgba(30, 30, 30, 0.7);cursor:pointer}
-.task-panel b{background:url(../images/desktop_spr_x.png) repeat-x;display:block;height:24px;font-weight:normal;border:1px solid;border-color:#6F758A #585C6D #414F5A}
+.task-panel b{background:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/desktop_spr_x.png) repeat-x;display:block;height:24px;font-weight:normal;border:1px solid;border-color:#6F758A #585C6D #414F5A}
 .task-panel b:hover{border-color:#AEB2BA #9196A1 #616A77;background-position:0 -25px}
 .task-panel b:active{border-color:#647382 #8A91A0 #9398A6;background-position:0 -50px}
 .task-panel b.focus{border-color:#B8BFCA #9EA8B7 #8A99A9;background-position:0 -75px}
@@ -62,7 +62,7 @@ body{height:100%;font:12px/1.8 Microsoft YaHei,simsong;height:100%;overflow:hidd
 .title-bar{background-color:#EBEBEB;border: 1px solid #ccc;position:relative;z-index:10;height:26px;padding:0 20px;line-height:26px;overflow:hidden;color:#393836;font-weight: bold;border-bottom:1px solid #CCC;cursor:move;border-radius: 3px 3px 0 0;}
 .window-current .title-bar{background-position:0 -31px}
 .title-handle{overflow: hidden;position: absolute;right: 5px;top: 4px;}
-.title-handle a{float:left;width:19px;height:21px;margin-left:5px;line-height:10;overflow:hidden;background-image:url(../images/sprite_main_png.png);background-repeat:no-repeat}
+.title-handle a{float:left;width:19px;height:21px;margin-left:5px;line-height:10;overflow:hidden;background-image:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/sprite_main_png.png);background-repeat:no-repeat}
 .ha-min{background-position:-5px -58px}
 .ha-min:hover{background-position:-5px -30px;}
 .ha-max{background-position:-34px -59px}

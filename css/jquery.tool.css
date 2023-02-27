@@ -47,7 +47,7 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover{}
 /* loadmask */
 .loadmask{z-index:1000;position:absolute;top:0;left:0;-moz-opacity:0.5;opacity:0.5;filter:alpha(opacity=50);background-color:#CCC;width:100%;height:100%;zoom:1}
 .loadmask-msg{z-index:9999;position:absolute;top:0;left:0;border:1px solid #cd0a0a;background:#fef6f3;padding:2px}
-.loadmask-msg div{padding:3px 10px 3px 20px;background:#fbfbfb url(../images/loadmask-loading.gif) no-repeat 5px center;line-height:16px;color:#cd0a0a;cursor:wait}
+.loadmask-msg div{padding:3px 10px 3px 20px;background:#fbfbfb url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/loadmask-loading.gif) no-repeat 5px center;line-height:16px;color:#cd0a0a;cursor:wait}
 .masked{overflow:hidden!important}
 .masked-relative{position:relative!important}
 .masked-hidden{visibility:hidden!important}
@@ -57,7 +57,7 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover{}
 .zeng_msgbox_layer .gtl_ico_fail,
 .zeng_msgbox_layer .gtl_ico_hits,
 .zeng_msgbox_layer .gtl_ico_clear,
-.zeng_msgbox_layer .gtl_end{display:inline-block;height:54px;line-height:54px;font-weight:bold;font-size:14px;color:#606060;background-image:url(../images/gb_tip_layer.png);_background-image:url(../images/gb_tip_layer_ie6.png);background-repeat:no-repeat}
+.zeng_msgbox_layer .gtl_end{display:inline-block;height:54px;line-height:54px;font-weight:bold;font-size:14px;color:#606060;background-image:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/gb_tip_layer.png);_background-image:url(https://jihulab.com/free163/mac3-4y.gs/-/raw/e75ccc4d064aeb8c349a5f2ffc6ba1199b71a6f5/images/gb_tip_layer_ie6.png);background-repeat:no-repeat}
 .zeng_msgbox_layer_wrap{width:100%;position:fixed;_position:absolute;top:46%;left:0;text-align:center;z-index:65533}
 .zeng_msgbox_layer{background-position:0 -161px;background-repeat:repeat-x;padding:0 18px 0 9px;margin:0 auto;position:relative}
 .zeng_msgbox_layer .gtl_ico_succ{background-position:-6px 0;left:-45px;top:0;width:45px;position:absolute}
