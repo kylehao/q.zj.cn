@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>听松阁桌面</title>
+<link type="text/css" rel="stylesheet" href="images/main.css">
+
+<link rel="stylesheet" href="css/player.css">
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="images/ie6.css" />
+<![endif]-->
+<script src="images/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="images/lightbox.min.js"></script>
+<style type="text/css">
+.wrapper{ margin:0px auto; padding:20px; border:1px solid #CCC; background:#333; width:980px; font-size:12px;}
+</style>
+<link rel="shortcut icon" type="image/x-icon" href="img/an.ico"/>
+		<style type="text/css">
+			/*样式初始化*/
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			/*去除横向滚动条*/
+			body {
+				overflow-x: hidden;
+				overflow-y: hidden;
+				background-color: 000;
+				font-size:13px;
+				color: #ffffff;
+			}
+			/*将div铺满整个窗口*/
+			.box {
+				height: 100vh;
+				min-height: 520px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+background-color: 000;
+			}
+			/*设置大ul的大小及定位*/
+			.content {
+				position: relative;
+				width: 100%;
+				height: 100%;
+background-color: 000;
+			}
+			/*设置大li样式*/
+			.content li {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			/*将第一张图片后的图片隐藏*/
+			#li1~li{display: none;}
+			/*设置大li背景图片*/
+			#li1 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg01.jpg);}
+			#li2 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg02.jpg);}
+			#li3 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg03.jpg);}
+			#li4 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg04.jpg);}
+			#li5 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg05.jpg);}
+			#li6 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg06.jpg);}
+			#li7 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg07.jpg);}
+			#li8 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg08.jpg);}
+			#li9 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/bg09.jpg);}
+			#li10 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/bg10.jpg);}
+			#li11 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/bg11.jpg);}
+			#li12 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/bg12.jpg);}
+			#li13 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/bg13.jpg);}
+			#li14 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/bg14.jpg);}
+			#li15 {background-image: url(https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/bg15.jpg);}
+			/*点击a标签,切换大图片*/
+			#li1:target,
+			#li2:target,
+			#li3:target,
+			#li4:target,
+			#li5:target,
+			#li6:target,
+			#li7:target,
+			#li8:target,
+			#li9:target,
+			#li10:target,
+			#li11:target,
+			#li12:target,
+			#li13:target,
+			#li14:target,
+			#li15:target{
+				display: block;
+			}
+			
+			
+		
+		</style>
+<script data-ad-client="ca-pub-8742386847853865" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<noscript></head></noscript>
+
+<body bgcolor="#000000" Scroll=no>
+	
+<div id="QPlayer" style="z-index:99;">
+	<div id="pContent">
+	
+		<div id="player">
+			<span class="cover"></span>
+			<div class="ctrl">
+				<div class="musicTag marquee">
+					<strong>Title</strong>
+					 <span> - </span>
+					<span class="artist">Artist</span>
+				</div>
+				<div class="progress">
+					<div class="timer left">0:00</div>
+					<div class="contr">
+						<div class="rewind icon"></div>
+						<div class="playback icon"></div>
+						<div class="fastforward icon"></div>
+					</div>
+					<div class="right">
+						<div class="liebiao icon"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ssBtn" style="background:#000 none repeat scroll 0% 0%">
+				<div class="adf"></div>
+		</div>
+	</div>
+	<ol id="playlist"></ol>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+
+<script type="text/javascript">
+var	playlist = [
+{title:"ALin-给我一个理由忘记",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/ALin-给我一个理由忘记.mp3",cover:"t.png",},
+{title:"ALin-有一种悲伤",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/ALin-有一种悲伤.mp3",cover:"t.png",},
+{title:"阿悄-陪我去流浪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/阿悄-陪我去流浪.mp3",cover:"t.png",},
+{title:"阿桑-疯了",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/阿桑-疯了.mp3",cover:"t.png",},
+{title:"阿桑-寂寞在唱歌",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/阿桑-寂寞在唱歌.mp3",cover:"t.png",},
+{title:"阿桑-受了点伤",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/阿桑-受了点伤.mp3",cover:"t.png",},
+{title:"岑宁儿-追光者",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/岑宁儿-追光者.mp3",cover:"t.png",},
+{title:"岑雨桥、萧全-触电(爱的魔力转圈圈)",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/岑雨桥、萧全-触电(爱的魔力转圈圈).mp3",cover:"t.png",},
+{title:"陈冠蒲-就让你走",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈冠蒲-就让你走.mp3",cover:"t.png",},
+{title:"陈冠蒲-太多",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈冠蒲-太多.mp3",cover:"t.png",},
+{title:"陈慧娴-千千阙歌",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈慧娴-千千阙歌.mp3",cover:"t.png",},
+{title:"陈琳-爱就爱了",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈琳-爱就爱了.mp3",cover:"t.png",},
+{title:"陈明-等你爱我",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈明-等你爱我.mp3",cover:"t.png",},
+{title:"陈明-我要找到你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈明-我要找到你.mp3",cover:"t.png",},
+{title:"陈瑞-白狐",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈瑞-白狐.mp3",cover:"t.png",},
+{title:"陈淑桦-情关",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈淑桦-情关.mp3",cover:"t.png",},
+{title:"陈伟霆、宝石Gem-野狼Disco",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/陈伟霆、宝石Gem-野狼Disco.mp3",cover:"t.png",},
+{title:"成龙、金喜善-无尽的爱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/成龙、金喜善-无尽的爱.mp3",cover:"t.png",},
+{title:"大壮-我们不一样",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/大壮-我们不一样.mp3",cover:"t.png",},
+{title:"戴佩妮-爱疯了",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/戴佩妮-爱疯了.mp3",cover:"t.png",},
+{title:"戴佩妮-街角的祝福",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/戴佩妮-街角的祝福.mp3",cover:"t.png",},
+{title:"戴佩妮-你要的爱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/戴佩妮-你要的爱.mp3",cover:"t.png",},
+{title:"戴佩妮-怎样",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/戴佩妮-怎样.mp3",cover:"t.png",},
+{title:"邓紫棋-倒数",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邓紫棋-倒数.mp3",cover:"t.png",},
+{title:"邓紫棋-光年之外",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邓紫棋-光年之外.mp3",cover:"t.png",},
+{title:"邓紫棋-你把我灌醉",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邓紫棋-你把我灌醉.mp3",cover:"t.png",},
+{title:"邓紫棋-泡沫",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邓紫棋-泡沫.mp3",cover:"t.png",},
+{title:"迪丽热巴、汪苏泷-偏偏",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/迪丽热巴、汪苏泷-偏偏.mp3",cover:"t.png",},
+{title:"付笛声、任静-知心爱人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/付笛声、任静-知心爱人.mp3",cover:"t.png",},
+{title:"高胜美、左宏元-渡情",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/高胜美、左宏元-渡情.mp3",cover:"t.png",},
+{title:"光良-第一次",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/光良-第一次.mp3",cover:"t.png",},
+{title:"光良-都是你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/光良-都是你.mp3",cover:"t.png",},
+{title:"光良-童话",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/光良-童话.mp3",cover:"t.png",},
+{title:"韩雪-飘雪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/韩雪-飘雪.mp3",cover:"t.png",},
+{title:"韩雪-想起",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/韩雪-想起.mp3",cover:"t.png",},
+{title:"黑豹乐队-无地自容",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/黑豹乐队-无地自容.mp3",cover:"t.png",},
+{title:"胡夏、郁可唯-知否知否",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/胡夏、郁可唯-知否知否.mp3",cover:"t.png",},
+{title:"黄小琥-伴",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/黄小琥-伴.mp3",cover:"t.png",},
+{title:"黄小琥-没那么简单",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/黄小琥-没那么简单.mp3",cover:"t.png",},
+{title:"黄小琥-顺其自然",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/黄小琥-顺其自然.mp3",cover:"t.png",},
+{title:"黄小琥-重来",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/黄小琥-重来.mp3",cover:"t.png",},
+{title:"火箭少女101-卡路里",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/火箭少女101-卡路里.mp3",cover:"t.png",},
+{title:"姜育恒-梅花三弄",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/姜育恒-梅花三弄.mp3",cover:"t.png",},
+{title:"李健-贝加尔湖畔",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李健-贝加尔湖畔.mp3",cover:"t.png",},
+{title:"李健-当你老了(Live)",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李健-当你老了(Live).mp3",cover:"t.png",},
+{title:"李健-风吹麦浪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李健-风吹麦浪.mp3",cover:"t.png",},
+{title:"李玟-想你的365天",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李玟-想你的365天.mp3",cover:"t.png",},
+{title:"李玟-月光爱人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李玟-月光爱人.mp3",cover:"t.png",},
+{title:"李沁-小偷",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李沁-小偷.mp3",cover:"t.png",},
+{title:"李荣浩-麻雀",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李荣浩-麻雀.mp3",cover:"t.png",},
+{title:"李荣浩-模特",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李荣浩-模特.mp3",cover:"t.png",},
+{title:"李荣浩-年少有为",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李荣浩-年少有为.mp3",cover:"t.png",},
+{title:"李圣杰-痴心绝对",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李圣杰-痴心绝对.mp3",cover:"t.png",},
+{title:"李圣杰-手放开",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李圣杰-手放开.mp3",cover:"t.png",},
+{title:"李昕融、樊桐舟、李凯稠-你笑起来真好看",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李昕融、樊桐舟、李凯稠-你笑起来真好看.mp3",cover:"t.png",},
+{title:"李宇春-梨花香",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李宇春-梨花香.mp3",cover:"t.png",},
+{title:"李宇春-无价之姐",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/李宇春-无价之姐.mp3",cover:"t.png",},
+{title:"梁静茹-爱你不是两三天",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/梁静茹-爱你不是两三天.mp3",cover:"t.png",},
+{title:"梁静茹-可惜不是你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/梁静茹-可惜不是你.mp3",cover:"t.png",},
+{title:"梁静茹-勇气",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/梁静茹-勇气.mp3",cover:"t.png",},
+{title:"林俊杰-江南",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林俊杰-江南.mp3",cover:"t.png",},
+{title:"林俊杰-一千年以后",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林俊杰-一千年以后.mp3",cover:"t.png",},
+{title:"林俊杰-醉赤壁",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林俊杰-醉赤壁.mp3",cover:"t.png",},
+{title:"林心如-落花",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林心如-落花.mp3",cover:"t.png",},
+{title:"林心如-倾听我",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林心如-倾听我.mp3",cover:"t.png",},
+{title:"林忆莲-不必在乎我是谁",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林忆莲-不必在乎我是谁.mp3",cover:"t.png",},
+{title:"林忆莲-伤痕",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林忆莲-伤痕.mp3",cover:"t.png",},
+{title:"林忆莲-至少还有你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林忆莲-至少还有你.mp3",cover:"t.png",},
+{title:"林志炫-没离开过",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林志炫-没离开过.mp3",cover:"t.png",},
+{title:"林志炫-烟花易冷",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/林志炫-烟花易冷.mp3",cover:"t.png",},
+{title:"零点乐队-相信自己",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/零点乐队-相信自己.mp3",cover:"t.png",},
+{title:"刘德华-冰雨",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/刘德华-冰雨.mp3",cover:"t.png",},
+{title:"刘珂矣-芙蓉雨",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/刘珂矣-芙蓉雨.mp3",cover:"t.png",},
+{title:"刘若英-很爱很爱你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/刘若英-很爱很爱你.mp3",cover:"t.png",},
+{title:"刘若英-后来",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/刘若英-后来.mp3",cover:"t.png",},
+{title:"刘若英-为爱痴狂",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/刘若英-为爱痴狂.mp3",cover:"t.png",},
+{title:"刘若英-一辈子的孤单",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/刘若英-一辈子的孤单.mp3",cover:"t.png",},
+{title:"卢冠廷-一生所爱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/卢冠廷-一生所爱.mp3",cover:"t.png",},
+{title:"罗文、甄妮-铁血丹心",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/罗文、甄妮-铁血丹心.mp3",cover:"t.png",},
+{title:"满文军-懂你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/满文军-懂你.mp3",cover:"t.png",},
+{title:"梦然-少年",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/梦然-少年.mp3",cover:"t.png",},
+{title:"莫文蔚-电台情歌",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/莫文蔚-电台情歌.mp3",cover:"t.png",},
+{title:"莫文蔚-盛夏的果实",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/莫文蔚-盛夏的果实.mp3",cover:"t.png",},
+{title:"潘玮柏-不得不爱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/潘玮柏-不得不爱.mp3",cover:"t.png",},
+{title:"潘玮柏-快乐崇拜",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/潘玮柏-快乐崇拜.mp3",cover:"t.png",},
+{title:"潘越云-天天天蓝",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/潘越云-天天天蓝.mp3",cover:"t.png",},
+{title:"潘越云-我是不是你最疼爱的人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/潘越云-我是不是你最疼爱的人.mp3",cover:"t.png",},
+{title:"齐秦-不让我的眼泪陪我过夜",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/齐秦-不让我的眼泪陪我过夜.mp3",cover:"t.png",},
+{title:"齐秦-大约在冬季",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/齐秦-大约在冬季.mp3",cover:"t.png",},
+{title:"齐秦-往事随风",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/齐秦-往事随风.mp3",cover:"t.png",},
+{title:"齐秦-无情的雨无情的你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/齐秦-无情的雨无情的你.mp3",cover:"t.png",},
+{title:"齐秦-夜夜夜夜",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/齐秦-夜夜夜夜.mp3",cover:"t.png",},
+{title:"齐豫-橄榄树",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/齐豫-橄榄树.mp3",cover:"t.png",},
+{title:"邱永传-十一年",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邱永传-十一年.mp3",cover:"t.png",},
+{title:"裘海正-爱我的人和我爱的人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/裘海正-爱我的人和我爱的人.mp3",cover:"t.png",},
+{title:"裘海正-九千九百九十九滴眼泪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/裘海正-九千九百九十九滴眼泪.mp3",cover:"t.png",},
+{title:"任贤齐-小雪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/任贤齐-小雪.mp3",cover:"t.png",},
+{title:"任贤齐-心太软",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/任贤齐-心太软.mp3",cover:"t.png",},
+{title:"容祖儿-小小",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/容祖儿-小小.mp3",cover:"t.png",},
+{title:"沙宝亮-暗香",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/沙宝亮-暗香.mp3",cover:"t.png",},
+{title:"沙宝亮-斑马斑马",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/沙宝亮-斑马斑马.mp3",cover:"t.png",},
+{title:"苏芮-牵手",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/苏芮-牵手.mp3",cover:"t.png",},
+{title:"孙燕姿-天黑黑",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/孙燕姿-天黑黑.mp3",cover:"t.png",},
+{title:"孙燕姿-我要的幸福",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/孙燕姿-我要的幸福.mp3",cover:"t.png",},
+{title:"孙燕姿-遇见",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/孙燕姿-遇见.mp3",cover:"t.png",},
+{title:"孙燕姿-原来你什么都不要",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/孙燕姿-原来你什么都不要.mp3",cover:"t.png",},
+{title:"孙悦-心情不错",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/孙悦-心情不错.mp3",cover:"t.png",},
+{title:"邰正宵、孙悦-好人好梦",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邰正宵、孙悦-好人好梦.mp3",cover:"t.png",},
+{title:"邰正宵-九百九十九朵玫瑰",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邰正宵-九百九十九朵玫瑰.mp3",cover:"t.png",},
+{title:"邰正宵-千纸鹤",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邰正宵-千纸鹤.mp3",cover:"t.png",},
+{title:"邰正宵-心要让你听见",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邰正宵-心要让你听见.mp3",cover:"t.png",},
+{title:"邰正宵-一千零一夜",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邰正宵-一千零一夜.mp3",cover:"t.png",},
+{title:"邰正宵-找一个字代替",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/邰正宵-找一个字代替.mp3",cover:"t.png",},
+{title:"田馥甄-小幸运",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/田馥甄-小幸运.mp3",cover:"t.png",},
+{title:"汪峰-北京北京",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/汪峰-北京北京.mp3",cover:"t.png",},
+{title:"汪峰-存在",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/汪峰-存在.mp3",cover:"t.png",},
+{title:"汪峰-怒放的生命",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/汪峰-怒放的生命.mp3",cover:"t.png",},
+{title:"汪正正-超越梦想",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/汪正正-超越梦想.mp3",cover:"t.png",},
+{title:"汪正正-重头再来",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/汪正正-重头再来.mp3",cover:"t.png",},
+{title:"王菲-传奇",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王菲-传奇.mp3",cover:"t.png",},
+{title:"王杰-伤心1999",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王杰-伤心1999.mp3",cover:"t.png",},
+{title:"王杰-忘记你不如忘记自己",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王杰-忘记你不如忘记自己.mp3",cover:"t.png",},
+{title:"王杰-忘了你忘了我",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王杰-忘了你忘了我.mp3",cover:"t.png",},
+{title:"王杰-为了爱梦一生",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王杰-为了爱梦一生.mp3",cover:"t.png",},
+{title:"王杰-一场游戏一场梦",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王杰-一场游戏一场梦.mp3",cover:"t.png",},
+{title:"王杰-一无所有",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王杰-一无所有.mp3",cover:"t.png",},
+{title:"王力宏-爱的就是你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王力宏-爱的就是你.mp3",cover:"t.png",},
+{title:"王力宏-唯一",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王力宏-唯一.mp3",cover:"t.png",},
+{title:"王铮亮-时间都去哪儿了",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/王铮亮-时间都去哪儿了.mp3",cover:"t.png",},
+{title:"萧煌奇-偷走",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧煌奇-偷走.mp3",cover:"t.png",},
+{title:"萧亚轩-Cappuccino",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-Cappuccino.mp3",cover:"t.png",},
+{title:"萧亚轩-HoneyHoneyHoney",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-HoneyHoneyHoney.mp3",cover:"t.png",},
+{title:"萧亚轩-窗外的天气",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-窗外的天气.mp3",cover:"t.png",},
+{title:"萧亚轩-突然想起你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-突然想起你.mp3",cover:"t.png",},
+{title:"萧亚轩-我爱你那么多",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-我爱你那么多.mp3",cover:"t.png",},
+{title:"萧亚轩-一个人的精彩",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-一个人的精彩.mp3",cover:"t.png",},
+{title:"萧亚轩-最熟悉的陌生人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/萧亚轩-最熟悉的陌生人.mp3",cover:"t.png",},
+{title:"小潘潘、小峰峰-学猫叫",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/小潘潘、小峰峰-学猫叫.mp3",cover:"t.png",},
+{title:"辛晓琪-味道",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/辛晓琪-味道.mp3",cover:"t.png",},
+{title:"信乐团-海阔天空",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/信乐团-海阔天空.mp3",cover:"t.png",},
+{title:"信乐团-假如",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/信乐团-假如.mp3",cover:"t.png",},
+{title:"信乐团-离歌",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/信乐团-离歌.mp3",cover:"t.png",},
+{title:"信乐团-死了都要爱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/信乐团-死了都要爱.mp3",cover:"t.png",},
+{title:"徐佳莹-突然好想你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/徐佳莹-突然好想你.mp3",cover:"t.png",},
+{title:"许慧欣-七月七日晴",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许慧欣-七月七日晴.mp3",cover:"t.png",},
+{title:"许佳慧-预谋",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许佳慧-预谋.mp3",cover:"t.png",},
+{title:"许美静-荡漾",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-荡漾.mp3",cover:"t.png",},
+{title:"许美静-都是夜归人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-都是夜归人.mp3",cover:"t.png",},
+{title:"许美静-快乐无罪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-快乐无罪.mp3",cover:"t.png",},
+{title:"许美静-蔓延",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-蔓延.mp3",cover:"t.png",},
+{title:"许美静-迷乱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-迷乱.mp3",cover:"t.png",},
+{title:"许美静-迫在眉梢",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-迫在眉梢.mp3",cover:"t.png",},
+{title:"许美静-铁窗",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-铁窗.mp3",cover:"t.png",},
+{title:"许美静-阳光总在风雨后",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-阳光总在风雨后.mp3",cover:"t.png",},
+{title:"许美静-遗憾",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许美静-遗憾.mp3",cover:"t.png",},
+{title:"许茹芸-独角戏",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许茹芸-独角戏.mp3",cover:"t.png",},
+{title:"许茹芸-泪海",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许茹芸-泪海.mp3",cover:"t.png",},
+{title:"许茹芸-日光机场",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许茹芸-日光机场.mp3",cover:"t.png",},
+{title:"许茹芸-如果云知道",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许茹芸-如果云知道.mp3",cover:"t.png",},
+{title:"许茹芸-一直是晴天",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许茹芸-一直是晴天.mp3",cover:"t.png",},
+{title:"许韶洋-花香",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许韶洋-花香.mp3",cover:"t.png",},
+{title:"许韶洋-幸福的瞬间",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许韶洋-幸福的瞬间.mp3",cover:"t.png",},
+{title:"许巍-曾经的你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/许巍-曾经的你.mp3",cover:"t.png",},
+{title:"薛之谦-暧昧",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/薛之谦-暧昧.mp3",cover:"t.png",},
+{title:"薛之谦-丑八怪",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/薛之谦-丑八怪.mp3",cover:"t.png",},
+{title:"薛之谦-你还要我怎样",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/薛之谦-你还要我怎样.mp3",cover:"t.png",},
+{title:"薛之谦-演员",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/薛之谦-演员.mp3",cover:"t.png",},
+{title:"严艺丹-三寸天堂",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/严艺丹-三寸天堂.mp3",cover:"t.png",},
+{title:"杨宗纬 张碧晨-凉凉",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/杨宗纬 张碧晨-凉凉.mp3",cover:"t.png",},
+{title:"叶丽仪-上海滩",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/叶丽仪-上海滩.mp3",cover:"t.png",},
+{title:"叶倩文、林子祥-选择",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/叶倩文、林子祥-选择.mp3",cover:"t.png",},
+{title:"叶倩文-真心真意过一生",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/叶倩文-真心真意过一生.mp3",cover:"t.png",},
+{title:"于文文-体面",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/于文文-体面.mp3",cover:"t.png",},
+{title:"俞静-红豆红",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/俞静-红豆红.mp3",cover:"t.png",},
+{title:"羽·泉-感觉不到你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/羽·泉-感觉不到你.mp3",cover:"t.png",},
+{title:"羽·泉-冷酷到底",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/羽·泉-冷酷到底.mp3",cover:"t.png",},
+{title:"羽·泉-深呼吸",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/羽·泉-深呼吸.mp3",cover:"t.png",},
+{title:"羽·泉-最美",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/羽·泉-最美.mp3",cover:"t.png",},
+{title:"庾澄庆-情非得已",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/庾澄庆-情非得已.mp3",cover:"t.png",},
+{title:"郁可唯-时间煮雨",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/郁可唯-时间煮雨.mp3",cover:"t.png",},
+{title:"郁可唯-思慕",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/郁可唯-思慕.mp3",cover:"t.png",},
+{title:"袁娅维-说散就散",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/袁娅维-说散就散.mp3",cover:"t.png",},
+{title:"张碧晨-年轮",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张碧晨-年轮.mp3",cover:"t.png",},
+{title:"张惠妹-剪爱",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张惠妹-剪爱.mp3",cover:"t.png",},
+{title:"张惠妹-哭不出来",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张惠妹-哭不出来.mp3",cover:"t.png",},
+{title:"张惠妹-听海",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张惠妹-听海.mp3",cover:"t.png",},
+{title:"张惠妹-站在高岗上",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张惠妹-站在高岗上.mp3",cover:"t.png",},
+{title:"张靓颖-画心",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张靓颖-画心.mp3",cover:"t.png",},
+{title:"张韶涵-呐喊",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张韶涵-呐喊.mp3",cover:"t.png",},
+{title:"张韶涵-欧若拉",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张韶涵-欧若拉.mp3",cover:"t.png",},
+{title:"张韶涵-隐形的翅膀",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张韶涵-隐形的翅膀.mp3",cover:"t.png",},
+{title:"张韶涵-寓言",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张韶涵-寓言.mp3",cover:"t.png",},
+{title:"张卫健-孤独不苦",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张卫健-孤独不苦.mp3",cover:"t.png",},
+{title:"张卫健-虚虚实实",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张卫健-虚虚实实.mp3",cover:"t.png",},
+{title:"张卫健-一辈子一场梦",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张卫健-一辈子一场梦.mp3",cover:"t.png",},
+{title:"张信哲、范文芳-别让情两难",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲、范文芳-别让情两难.mp3",cover:"t.png",},
+{title:"张信哲、刘嘉玲-有一点动心",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲、刘嘉玲-有一点动心.mp3",cover:"t.png",},
+{title:"张信哲-爱不留",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-爱不留.mp3",cover:"t.png",},
+{title:"张信哲-爱就一个字",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-爱就一个字.mp3",cover:"t.png",},
+{title:"张信哲-爱如潮水",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-爱如潮水.mp3",cover:"t.png",},
+{title:"张信哲-别怕我伤心",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-别怕我伤心.mp3",cover:"t.png",},
+{title:"张信哲-不要对他说",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-不要对他说.mp3",cover:"t.png",},
+{title:"张信哲-从开始到现在",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-从开始到现在.mp3",cover:"t.png",},
+{title:"张信哲-过火",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-过火.mp3",cover:"t.png",},
+{title:"张信哲-宽容",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-宽容.mp3",cover:"t.png",},
+{title:"张信哲-某某某",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-某某某.mp3",cover:"t.png",},
+{title:"张信哲-难以抗拒你容颜",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-难以抗拒你容颜.mp3",cover:"t.png",},
+{title:"张信哲-太想爱你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-太想爱你.mp3",cover:"t.png",},
+{title:"张信哲-信仰",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-信仰.mp3",cover:"t.png",},
+{title:"张信哲-用情",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-用情.mp3",cover:"t.png",},
+{title:"张信哲-直觉",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张信哲-直觉.mp3",cover:"t.png",},
+{title:"张学友-当我想起你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-当我想起你.mp3",cover:"t.png",},
+{title:"张学友-分手总要在雨天",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-分手总要在雨天.mp3",cover:"t.png",},
+{title:"张学友-情书",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-情书.mp3",cover:"t.png",},
+{title:"张学友-秋意浓",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-秋意浓.mp3",cover:"t.png",},
+{title:"张学友-吻别",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-吻别.mp3",cover:"t.png",},
+{title:"张学友-心如刀割",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-心如刀割.mp3",cover:"t.png",},
+{title:"张学友-一千个伤心的理由",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张学友-一千个伤心的理由.mp3",cover:"t.png",},
+{title:"张宇-一言难尽",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张宇-一言难尽.mp3",cover:"t.png",},
+{title:"张宇-雨一直下",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张宇-雨一直下.mp3",cover:"t.png",},
+{title:"张雨生-大海",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张雨生-大海.mp3",cover:"t.png",},
+{title:"张云雷-探清水河",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/张云雷-探清水河.mp3",cover:"t.png",},
+{title:"赵方婧-闭月",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-闭月.mp3",cover:"t.png",},
+{title:"赵方婧-尽头",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-尽头.mp3",cover:"t.png",},
+{title:"赵方婧-芒种",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-芒种.mp3",cover:"t.png",},
+{title:"赵方婧-青灯",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-青灯.mp3",cover:"t.png",},
+{title:"赵方婧-瑞鹤仙",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-瑞鹤仙.mp3",cover:"t.png",},
+{title:"赵方婧-小暑",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-小暑.mp3",cover:"t.png",},
+{title:"赵方婧-直觉",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵方婧-直觉.mp3",cover:"t.png",},
+{title:"赵雷-成都",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵雷-成都.mp3",cover:"t.png",},
+{title:"赵露思-时光话",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/赵露思-时光话.mp3",cover:"t.png",},
+{title:"周笔畅-笔记",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周笔畅-笔记.mp3",cover:"t.png",},
+{title:"周传雄-黄昏",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周传雄-黄昏.mp3",cover:"t.png",},
+{title:"周华健-风雨无阻",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周华健-风雨无阻.mp3",cover:"t.png",},
+{title:"周华健-难念的经",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周华健-难念的经.mp3",cover:"t.png",},
+{title:"周蕙-不想让你知道",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-不想让你知道.mp3",cover:"t.png",},
+{title:"周蕙-风铃",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-风铃.mp3",cover:"t.png",},
+{title:"周蕙-好想好好爱你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-好想好好爱你.mp3",cover:"t.png",},
+{title:"周蕙-没有你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-没有你.mp3",cover:"t.png",},
+{title:"周蕙-我看",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-我看.mp3",cover:"t.png",},
+{title:"周蕙-相遇太早",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-相遇太早.mp3",cover:"t.png",},
+{title:"周蕙-约定",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周蕙-约定.mp3",cover:"t.png",},
+{title:"周杰伦-稻香",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周杰伦-稻香.mp3",cover:"t.png",},
+{title:"周杰伦-告白气球",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周杰伦-告白气球.mp3",cover:"t.png",},
+{title:"周杰伦-菊花台",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周杰伦-菊花台.mp3",cover:"t.png",},
+{title:"周杰伦-青花瓷",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周杰伦-青花瓷.mp3",cover:"t.png",},
+{title:"周深-触不可及",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-触不可及.mp3",cover:"t.png",},
+{title:"周深-此生惟你",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-此生惟你.mp3",cover:"t.png",},
+{title:"周深-大鱼",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-大鱼.mp3",cover:"t.png",},
+{title:"周深-欢颜",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-欢颜.mp3",cover:"t.png",},
+{title:"周深-年轮(Live)",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-年轮(Live).mp3",cover:"t.png",},
+{title:"周深-水形物语",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-水形物语.mp3",cover:"t.png",},
+{title:"周深-微光海洋",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-微光海洋.mp3",cover:"t.png",},
+{title:"周深-雪落下的声音(Live)",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-雪落下的声音(Live).mp3",cover:"t.png",},
+{title:"周深-与卿",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-与卿.mp3",cover:"t.png",},
+{title:"周深-愿得一心人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周深-愿得一心人.mp3",cover:"t.png",},
+{title:"周迅-飘摇",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/周迅-飘摇.mp3",cover:"t.png",},
+{title:"庄心妍、祁隆-一万个舍不得",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/庄心妍、祁隆-一万个舍不得.mp3",cover:"t.png",},
+{title:"庄心妍-爱囚",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/庄心妍-爱囚.mp3",cover:"t.png",},
+{title:"庄心妍-以后的以后",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/庄心妍-以后的以后.mp3",cover:"t.png",},
+{title:"庄心妍-再见只是陌生人",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/庄心妍-再见只是陌生人.mp3",cover:"t.png",},
+{title:"庄心妍-走着走着就散了",artist:"",mp3:"http://code.aliyun.com/free163/sharelist/raw/77e4a35c288b6dbe864592a90e21e7c2dc01fc7f/简选/国语/庄心妍-走着走着就散了.mp3",cover:"t.png",},
+
+
+];
+  var isRotate = true;
+  var autoplay = false;
+</script>
+<script src="js/player.js"></script>
+<script>
+
+function bgChange(){
+	var lis= $('.lib');
+	for(var i=0; i<lis.length; i+=2)
+	lis[i].style.background = 'rgba(246, 246, 246, 0.7)';
+}
+window.onload = bgChange;
+</script>
+
+
+
+		<div class="box" style="z-index:1;">
+			<ul class="content">
+				<li id="li1"></li>
+				<li id="li2"></li>
+				<li id="li3"></li>
+				<li id="li4"></li>
+				<li id="li5"></li>
+				<li id="li6"></li>
+				<li id="li7"></li>
+				<li id="li8"></li>
+				<li id="li9"></li>
+				<li id="li10"></li>
+				<li id="li11"></li>
+				<li id="li12"></li>
+				<li id="li13"></li>
+				<li id="li14"></li>
+				<li id="li15"></li>
+			</ul>
+		</div>
+
+<!-- 代码 开始 -->
+<div class="fish" style="position:absolute; width:1350px; height:500px; z-index:1; left: 20px; top: 40px;backgroud-color:000;">
+<table>
+	
+	<!-- 第1行 -->
+    <tr>
+     <td align="center" width="60"><a href="http://cloud.2345.ltd/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="folder" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/folder.gif" width="50" height="50" border="0" id="index_r2_c2" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://660000.xyz/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="pictures" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/pictures.gif" width="50" height="50" border="0" id="index_r2_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://vip.2345.ltd/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="vip" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/vip.gif" width="50" height="50" border="0" id="index_r2_c6" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+    </tr>
+    <tr>
+     <td align="center" width="60">我的文档</td>
+     <td width="20"></td>
+     <td align="center" width="60">我的相册</td>
+     <td width="20"></td>
+     <td align="center" width="60">视频解析</td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+    </tr>
+    <tr>
+     <td>&nbsp;</td>
+    </tr>
+    
+<!-- 第2行 -->   
+    <tr>
+     <td align="center" width="60"><a href="http://pan.2345.ltd/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="computer" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/computer.gif" width="50" height="50" border="0" id="index_r5_c2" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://www.free163.com/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="poem" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/poem.gif" width="50" height="50" border="0" id="index_r5_c6" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://www.odj.cc" target="_blank"><img name="music" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/lxyy.gif" width="50" height="50" border="0" id="index_r11_c2" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+    </tr>
+    <tr>
+     <td align="center" width="60">我的电脑</td>
+     <td width="20"></td>
+     <td align="center" width="60">古典诗词</td>
+     <td width="20"></td>
+     <td align="center" width="60">在线音乐</td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+    </tr>
+    <tr>
+     <td>&nbsp;</td>
+    </tr>
+    
+<!-- 第3行 -->
+    <tr>
+     <td align="center" width="60"><a href="http://www.book.ga/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="wuxia" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/wuxia.gif" width="50" height="50" border="0" id="index_r8_c6" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://www.free163.tk" target="_blank"><img name="down" src="https://code.aliyun.com/free163/publiclib/raw/bff315f5addde02d41b7cacfdd403118168fe67c/desktop_computer/log.png" width="50" height="50" border="0" id="index_r11_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://alist.2345.ltd" target="_blank"><img name="down" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/aliyun.gif" width="50" height="50" border="0" id="index_r11_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+    </tr>
+    <tr>
+     <td align="center" width="60">武侠小说</td>
+     <td width="20"></td>
+     <td align="center" width="60">听松阁</td>
+     <td width="20"></td>
+     <td align="center" width="60">阿里云盘</td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+    </tr>
+    <tr>
+     <td>&nbsp;</td>
+    </tr>
+    
+<!-- 第4行 -->
+    <tr>
+     <td align="center" width="60"><a href="http://skycz.com/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="blog" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/blog.gif" width="50" height="50" border="0" id="index_r11_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://kylehao.ysepan.com/" target="_blank"><img name="share" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/share.gif" width="50" height="50" border="0" id="index_r5_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+    </tr>
+   <tr>
+    <td align="center" width="60">我的博客</td>
+    <td width="20"></td>
+    <td align="center" width="60">文件分享</td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+   </tr>
+   <tr>
+    <td >&nbsp;</td>
+   </tr>
+<!-- 第5行 -->
+    <tr>
+     <td align="center" width="60"><a href="http://mail.pu.cx/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="mail" src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/mail.gif" width="50" height="50" border="0" id="index_r11_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"><a href="http://www.kkkk.info/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img name="mail" src="https://code.aliyun.com/free163/publiclib/raw/954a6131117869f8d446463746df3df4d6aa0a84/desktop_computer/mi.png" width="50" height="50" border="0" id="index_r11_c4" alt="" /></a></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+     <td align="center" width="60"></td>
+     <td width="20"></td>
+    </tr>
+   <tr>
+    <td align="center" width="60">我的邮局</td>
+    <td width="20"></td>
+    <td align="center" width="60">我的米表</td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+    <td align="center" width="60"></td>
+    <td width="20"></td>
+   </tr>
+   <tr>
+    <td >&nbsp;</td>
+   </tr>
+
+  </table>
+</div>
+
+
+<!-- 动态图 -->
+<div class="fish" style="position:absolute; width:280px; height:175px; z-index:1; left: 539px; top: 50px;backgroud-color:000;">
+<img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_images/fish.gif" width="280" height="175" border="0" alt="">
+</div>
+<div class="fish" style="position:absolute; width:280px; height:175px; z-index:1; left: 839px; top: 248px;backgroud-color:000;">
+<img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_images/fish.gif" width="280" height="175" border="0" alt="">
+</div>
+
+<!-- 底部和按钮 -->
+<div class="fish" style="position:absolute; width:1365; height:39; z-index:1; left: 0px; bottom: -3px;backgroud-color:000;">
+<img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_images/bottom.jpg" width="1366" height="39" border="0" alt="">
+
+</div>
+
+<div class="fish" style="position:absolute; width:50; height:50; z-index:1; left: 0px; bottom: -3px;backgroud-color:000;">
+<table>
+	<tr>
+		<td><a href="http://my.2345.ltd/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="40" height="50" border="0" alt=""></a></td>
+		<td width="20">&nbsp;</td>
+		<td><a href="http://cloud.2345.ltd/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="40" height="50" border="0" alt=""></a></td>
+		<td width="1050">&nbsp;</td>
+		<td><a href="http://wx.qq.com/?lightbox[iframe]=true&lightbox[width]=800&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="15" height="50" border="0" alt=""></a></td>
+		<td width="10">&nbsp;</td>
+		<td><a href="http://www.360.cn/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="15" height="50" border="0" alt=""></a></td>
+		<td width="7">&nbsp;</td>
+		<td><a href="http://odj.cc/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="15" height="50" border="0" alt=""></a></td>
+		<td width="6">&nbsp;</td>
+		<td><a href="http://odj.cc/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="15" height="50" border="0" alt=""></a></td>
+		<td width="4">&nbsp;</td>
+		<td><a href="http://odj.cc/?lightbox[iframe]=true&lightbox[width]=1200&lightbox[height]=540" class="lightbox"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_computer/space.gif" width="15" height="50" border="0" alt=""></a></td>
+		
+			
+	</tr>
+</table>
+</div>
+
+
+<div class="fish" style="position:absolute; width:550px; height:20; z-index:1; left: 0px; bottom: -3px;backgroud-color:000;">
+<ul class="conlist" style="position:absolute; width:550px; height:30px; z-index:1; left: 640px; bottom: 0px;backgroud-color:000;">
+				<a href="#li1" class="a1"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn01.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li2" class="a2"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn02.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li3" class="a3"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn03.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li4" class="a4"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn04.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li5" class="a5"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn05.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li6" class="a6"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn06.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li7" class="a7"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn07.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li8" class="a8"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn08.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li9" class="a9"><img src="https://code.aliyun.com/free163/publiclib/raw/0bb5e4aec8d0bdd1a4ebcda03491b9b8a3115e28/desktop_img/btn09.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li10" class="a10"><img src="https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/btn10.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li11" class="a11"><img src="https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/btn11.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li12" class="a12"><img src="https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/btn12.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li13" class="a13"><img src="https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/btn13.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li14" class="a14"><img src="https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/btn14.jpg" width="30" height="12" border="0" alt=""></a>
+				<a href="#li15" class="a15"><img src="https://code.aliyun.com/free163/publiclib/raw/afb484c8e07676ad23d090d07a7ffb073b65499b/desktop_img/btn15.jpg" width="30" height="12" border="0" alt=""></a>
+			</ul>
+</div>
+
+
+</div>
+<!-- 代码 结束 -->
+	</body>
+
+</html>
