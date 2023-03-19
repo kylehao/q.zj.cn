@@ -1,0 +1,199 @@
+// Created via https://icomoon.io/app
+
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon-mail: "\ea83";
+$icon-rss: "\e90e";
+$icon-library: "\e921";
+$icon-location: "\e947";
+$icon-stats-bars: "\e99c";
+$icon-briefcase: "\e9ae";
+$icon-link: "\e9cb";
+
+$icon-500px: "\e900";
+$icon-behance: "\e901";
+$icon-dribbble: "\e902";
+$icon-dropbox: "\e903";
+$icon-facebook: "\e904";
+$icon-github: "\e905";
+$icon-google: "\e906";
+$icon-googledrive: "\e907";
+$icon-linkedin: "\e909";
+$icon-mastodon: "\e90b";
+$icon-pinterest: "\e90c";
+$icon-reddit: "\e90d";
+$icon-skype: "\e90f";
+$icon-soundcloud: "\e910";
+$icon-spotify: "\e911";
+$icon-stackoverflow: "\e912";
+$icon-steam: "\e913";
+$icon-telegram: "\e914";
+$icon-tumblr: "\e916";
+$icon-twitch: "\e917";
+$icon-twitter: "\e918";
+$icon-xing: "\e919";
+$icon-youtube: "\e91a";
+$icon-googlehangouts: "\e908";
+$icon-tiktok: "\e915";
+
+@mixin social($icon, $color) {
+  &:before {
+    transition: color 0.3s ease;
+    content: $icon;     
+    color: #9eabb3;
+  }
+  
+  &:hover {
+    color: $color;
+    &:before {
+      color: $color;
+    }
+  }
+}
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?kv6d7i') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?kv6d7i') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?kv6d7i##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+    padding: 0 5px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// General purpose
+
+.icon-library {
+  &:before {
+    content: $icon-library; 
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location; 
+  }
+}
+.icon-stats-bars {
+  &:before {
+    content: $icon-stats-bars; 
+  }
+}
+.icon-briefcase {
+  &:before {
+    content: $icon-briefcase; 
+  }
+}
+.icon-link {
+  &:before {
+    content: $icon-link; 
+  }
+}
+
+// About me page specific
+
+.icon-github {
+  @include social($icon-github, #4078c0);
+}
+.icon-500px {
+  @include social($icon-500px, #0099e5);
+}
+.icon-behance {
+  @include social($icon-behance, #1769ff);
+}
+.icon-dribbble {
+  @include social($icon-dribbble, #ea4c89);
+}
+.icon-dropbox {
+  @include social($icon-dropbox, #0061ff);
+}
+.icon-facebook {
+  @include social($icon-facebook, #1877f2);
+}
+.icon-google {
+  @include social($icon-google, #4285f4);
+}
+.icon-googledrive {
+  @include social($icon-googledrive, #4285f4);
+}
+.icon-googlehangouts {
+  @include social($icon-googlehangouts, #0c9d58);
+}
+.icon-linkedin {
+  @include social($icon-linkedin, #0077b5);
+}
+.icon-mail {
+  @include social($icon-mail, #111);
+}
+.icon-mastodon {
+  @include social($icon-mastodon, #3088d4);
+}
+.icon-pinterest {
+  @include social($icon-pinterest, #bd081c);
+}
+.icon-reddit {
+  @include social($icon-reddit, #ff4500);
+}
+.icon-rss {
+  @include social($icon-rss, #ffa500);
+}
+.icon-skype {
+  @include social($icon-skype, #00aff0);
+}
+.icon-soundcloud {
+  @include social($icon-soundcloud, #f30);
+}
+.icon-spotify {
+  @include social($icon-spotify, #1ed760);
+}
+.icon-stackoverflow {
+  @include social($icon-stackoverflow, #fe7a16);
+}
+.icon-steam {
+  @include social($icon-steam, #000);
+}
+.icon-telegram {
+  @include social($icon-telegram, #2ca5e0);
+}
+.icon-tiktok {
+  @include social($icon-tiktok, #000);
+}
+.icon-tumblr {
+  @include social($icon-tumblr, #36465d);
+}
+.icon-twitch {
+  @include social($icon-twitch, #6441a4);
+}
+.icon-twitter {
+  @include social($icon-twitter, #1da1f2);
+}
+.icon-xing {
+  @include social($icon-xing, #006567);
+}
+.icon-youtube {
+  @include social($icon-youtube, #f00);
+}
