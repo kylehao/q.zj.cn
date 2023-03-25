@@ -1,7 +1,7 @@
 ---
 layout:            post
-title:             "8f.pw"
-menutitle:         "霸服,2029到期/188￥"
+title:             "cccccccccccccccccccccccccccccccccccccccccccc.cc"
+menutitle:         "46个C，超长域名/99￥"
 category:          Features
 author:            https://www.west.cn/shop/?861298
 tags:              Jekyll Content Demo
